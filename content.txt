@@ -1,0 +1,7 @@
+1. Class and Object 
+2. Class has data/attributes and func/methods
+   
+   Attributes are called themselves.
+   We call methods manually.
+
+3. Why python is OOP? - Because everything is an object made in a class.
