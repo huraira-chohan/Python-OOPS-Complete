@@ -15,7 +15,10 @@ class gari:
 
 # gari ka object
 bugatti = gari()
+
+# calling att
 print(bugatti.engine)
     
+# calling method    
 bugatti.milage_eng()
 
