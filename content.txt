@@ -5,3 +5,12 @@
    We call methods manually.
 
 3. Why python is OOP? - Because everything is an object made in a class.
+
+# Now i can do this :
+
+from project import chohanbook
+
+user1 = chohanbook()
+
+
+4. End - End chohanbook made

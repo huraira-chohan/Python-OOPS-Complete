@@ -22,9 +22,9 @@ class chohanbook:
         elif user_input == '2':
              self.signin()
         elif user_input == '3':
-             pass
+             self.user_post()
         elif user_input == '4':
-             pass
+             self.snd_message()
         else:
              exit()
 
@@ -54,12 +54,35 @@ class chohanbook:
            if self.username == uemail  and self.password == upwd:
                 print('You have signed in sucessfully.')
                 print("")
+                self.loggedin = True
                 self.menu()
-                self.loggedin == True
            else:
                 print("Enter right credidentials.")
                 print("")
                 self.menu()
+
+    def user_post(self):
+        if self.loggedin == True:
+            txt = input("Enter your content : ")
+            self.post_text = txt   # save it
+            print(f"Posted : {txt}")
+            self.menu()
+        else:
+            print("Plz signin first...")
+            self.menu()
+
+
+
+
+    def snd_message(self):
+        if self.loggedin == True:
+             user = input("Type friend_name : ")
+             message = input("Type your message here : ")
+             print(f"Your message {message} has been sent to {user}")
+             self.menu()
+        else:
+             print("Plz signin first...")         
+             self.menu()
 
 
 

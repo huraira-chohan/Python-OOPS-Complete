@@ -25,4 +25,3 @@ print(sam.salary)
 
 # Calling a method :
 print(sam.travel('isl'))
-
