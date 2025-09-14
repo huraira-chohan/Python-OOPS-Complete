@@ -1,21 +1,29 @@
 class chohanbook:
-    def __init__(self):
+    
+     __user_id = 0 # static variable
+
+     def __init__(self):
         # attributes
+
+        self.__name = 'Huraira'
+        self.id = chohanbook.__user_id
+        chohanbook.__user_id += 1
         self.username = ""
         self.password = ""
         self.loggedin = False
         self.messege = ""
         self.post = ""
-        self.menu()
+     #    self.menu()
 
         # methods
-    def menu(self):
+     def menu(self):
         user_input = (input("""
             Press 1 for signup.
             Press 2 for signin.
             Press 3 to post.
             Press 4 to message a friend.
             Press any other key to exit."""))
+        
         
         if user_input == '1':
              self.signup()
@@ -29,8 +37,25 @@ class chohanbook:
              exit()
 
 
+     @staticmethod  # Not giving self, obj can't access it only class can.
+     def get_id():
+         return chohanbook.__user_id
 
-    def signup (self):
+
+     @staticmethod
+     def set_id(value):
+         chohanbook.__user_id = value
+
+
+     def get_name(self):   # getter
+         return self.__name
+
+
+     def set_name(self,value): # setter
+         self.__name = value
+
+
+     def signup (self):
          email = input("Plz enter your email : ")
          pwd = input("Plz setup your passcode : ")
          self.username = email
@@ -42,7 +67,7 @@ class chohanbook:
 
 
 
-    def signin (self):
+     def signin (self):
         if self.username== "" and self.password == "":
               print("")
               print("Press 1 to signup first...")
@@ -61,7 +86,8 @@ class chohanbook:
                 print("")
                 self.menu()
 
-    def user_post(self):
+
+     def user_post(self):
         if self.loggedin == True:
             txt = input("Enter your content : ")
             self.post_text = txt   # save it
@@ -74,7 +100,7 @@ class chohanbook:
 
 
 
-    def snd_message(self):
+     def snd_message(self):
         if self.loggedin == True:
              user = input("Type friend_name : ")
              message = input("Type your message here : ")
