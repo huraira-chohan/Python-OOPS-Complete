@@ -1,4 +1,5 @@
 1. Class and Object 
+
 2. Class has data/attributes and func/methods
    
    Attributes are called themselves.
@@ -14,3 +15,33 @@ user1 = chohanbook()
 
 
 4. End - End chohanbook made
+
+5. Encapsulation : Hiding sensitive stuff by using __. before any attribute.
+
+6. Getter - Get a hidden attribute -- Safely read a hidden attribute
+
+7. Setter - Set a new value to a hidden attribute -- Safely change a hidden attribute
+
+8. INHERITENCE 
+
+   1. Why needed? - To reuse code 
+
+   2. Parent  doesnot have access to child.
+
+   3. We inheret : constructor - non-private attributes - non-private methods
+
+   4. Constructor Overriding : If we create a constructor inside a child class,
+                               the constructor inside parent class will become null. 
+
+   5. Method Overriding : If name of methods is same in parent and child,
+                          the child method will be called.
+
+9. SUPER METHOD 
+
+   1. We can use attributes and methods in child class. 
+
+   2. But it calls the whole constructor not a single attribute.
+
+   3. Can not be called from outside the class.
+
+   
