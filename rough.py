@@ -9,7 +9,7 @@ from project import chohanbook
 user1 = chohanbook()
 print(user1.id)
 
-chohanbook.set_id(5)
+chohanbook.set_id(5) # Using static method 
 
 user2 = chohanbook()
 print(user2.id)

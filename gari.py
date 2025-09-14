@@ -5,8 +5,8 @@ class sell_your_gari:
         # gari ky attributes
         self.model = ''
         self.color = ''
-        self.milage = ''
-        self.menu()
+        self.milage = '10'
+        # self.menu()
         
         # gari ka method
 
@@ -51,5 +51,14 @@ class sell_your_gari:
         print(f"Car Color: {self.color}")
         print(f"Car Milage: {self.milage}\n")
 
+class honda(sell_your_gari):
+    def __init__(self,name):
+        super().__init__()
+        self.name = name
+
+    def gari_milage(self):
+        print(f"{self.name} has milage {self.milage}")
+
 # gari ka object
-bugatti = sell_your_gari()
+bug = honda('2006 model')
+bug.gari_milage()
